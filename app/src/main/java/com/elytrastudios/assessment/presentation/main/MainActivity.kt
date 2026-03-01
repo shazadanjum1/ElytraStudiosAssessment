@@ -1,4 +1,4 @@
-package com.elytrastudios.assessment
+package com.elytrastudios.assessment.presentation.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,12 +8,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.elytrastudios.assessment.ui.theme.ElytraStudiosAssessmentTheme
 import androidx.navigation.compose.rememberNavController
 import com.elytrastudios.assessment.navigation.AppNavGraph
 import com.elytrastudios.assessment.navigation.BottomNavigationBar
+import com.elytrastudios.assessment.ui.theme.ElytraStudiosAssessmentTheme
 import dagger.hilt.android.AndroidEntryPoint
-
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -24,17 +23,15 @@ class MainActivity : ComponentActivity() {
             ElytraStudiosAssessmentTheme {
                 val navController = rememberNavController()
                 Scaffold(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.Companion.fillMaxSize(),
                     bottomBar = { BottomNavigationBar(navController) }
                 ) { innerPadding ->
                     AppNavGraph(
                         navController = navController,
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.Companion.padding(innerPadding)
                     )
                 }
             }
         }
     }
 }
-
-

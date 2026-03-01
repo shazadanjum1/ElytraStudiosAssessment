@@ -27,7 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.elytrastudios.assessment.MainActivity
+import com.elytrastudios.assessment.presentation.main.MainActivity
 import com.elytrastudios.assessment.data.model.DogBreed
 import kotlinx.coroutines.launch
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
