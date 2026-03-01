@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ main ]   # Runs automatically on every push to main
+    branches: [ master ]   # Runs automatically on every push to main
   pull_request:
-    branches: [ main ]   # Runs automatically on every PR targeting main (required)
+    branches: [ master ]   # Runs automatically on every PR targeting main (required)
 
 jobs:
   build:
@@ -65,4 +65,3 @@ jobs:
         with:
           name: prod-release-apk
           path: app/build/outputs/apk/prod/release/*.apk
-          
