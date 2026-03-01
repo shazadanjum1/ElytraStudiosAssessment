@@ -15,6 +15,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Ensure the Gradle wrapper script has execute permissions on Linux runners
+      - name: Ensure gradlew is executable
+        run: chmod +x gradlew
+
       # Set up JDK 11 (matches your Gradle compileOptions/kotlinOptions)
       - name: Set up JDK 11
         uses: actions/setup-java@v4
