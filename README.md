@@ -31,7 +31,7 @@ flowchart TD
 
 ### Prerequisites
 - **Android Studio**: Android Studio Narwhal 4 Feature Drop | 2025.1.4
-- **JDK**: 11+
+- **JDK**: 17+
 - **Gradle**: 8.13 (bundled with Android Studio)
 
 ### Steps
