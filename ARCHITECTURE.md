@@ -26,13 +26,10 @@
 ### Utilities
 - **AppLogger**: Centralized logging (Timber).
 - **NetworkState**: Network availability checks.
-- **Extensions**: Common Kotlin extension functions.
 
 ---
 
 ## Data Flow
-
-```mermaid
 sequenceDiagram
     UI->>ViewModel: User action
     ViewModel->>UseCase: Execute
@@ -56,7 +53,6 @@ sequenceDiagram
 - Example:
   - `UserRepositoryImpl` injected with `UserApi`, `UserDao`, `MockDataSource`.
   - ViewModels annotated with `@HiltViewModel` and injected with use cases.
-- **Navigation**: `hilt-navigation-compose` integrates DI with Compose navigation.
 
 ---
 

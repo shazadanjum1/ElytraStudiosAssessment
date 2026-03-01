@@ -6,7 +6,6 @@
 This project is a Jetpack Compose–based Android application built with **Clean Architecture** principles. It demonstrates modern Android development practices including lifecycle‑aware polling, offline caching with Room, dependency injection with Hilt, and networking with Retrofit/OkHttp.
 
 ### Architecture Diagram
-```mermaid
 flowchart TD
     UI[Compose UI] --> VM[ViewModel]
     VM --> UC[Use Cases]
@@ -163,6 +162,5 @@ sequenceDiagram
 - Polling job canceled automatically when lifecycle is destroyed.
 
 ### Performance Considerations
-- Avoids duplicate jobs with `PollingStatusManager`.
 - Updates timestamp on each fetch.
 - Uses Room cache to minimize API calls when offline.
