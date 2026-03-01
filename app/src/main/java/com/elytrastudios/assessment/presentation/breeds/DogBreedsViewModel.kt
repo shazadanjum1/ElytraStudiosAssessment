@@ -1,6 +1,5 @@
 package com.elytrastudios.assessment.presentation.breeds
 
-
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.elytrastudios.assessment.data.model.DogBreed
@@ -61,8 +60,15 @@ class DogBreedsViewModel @Inject constructor(
     // Manual refresh triggered by pull-to-refresh or retry
     fun refreshBreeds() {
         viewModelScope.launch {
-            fetchBreeds()
+            resetPollingTimer()
         }
+    }
+
+    private fun resetPollingTimer() {
+        // Cancel current polling job
+        stopPolling()
+        // Restart polling job fresh
+        startPolling()
     }
 
     // Core fetch logic: calls use case, updates state, logs, updates PollingStatusManager
